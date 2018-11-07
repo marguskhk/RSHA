@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Programm, mis prindib kuupäeva ja kellaaja ning salvestab vajalikud andmed
+#faili sisse.
+
+kokku=`date`;
+Kuu=`date | awk -F" " '{ print $2 }'`;
+Kuup2ev=`date | awk -F" " '{ print $3 }'`;
+Paev=`date |awk -F" " '{ print $1 }'`;
+Kellaaeg=`date | awk -F" " '{ print $4 }'`;
+Riik=`date | awk -F" " '{ print $5 }'`;
+Aasta=`date | awk -F" " '{ print $6 }'`;
+Nr=`date |awk -F" " '{ print $4 }' | awk -F: '{ print $2 }'`;
+
+# echo k2sk peab olema yhe reaga
+
+echo "T2nane kuup2ev on ${Kuu} ${Kuup2ev} ${Aasta}. Kell on ${Kellaaeg}. See on ${Riik} aeg."  >/home/margus/temp/cron_proov${Nr}.txt
