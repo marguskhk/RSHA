@@ -1,0 +1,5 @@
+Shell= /bin/bash
+
+MAILTO= root
+
+0 */2 * * * /root/rsha/praks3/lisa_db
